@@ -124,9 +124,8 @@ header {
         color: $color-primario;
     }
 }
-.btn-default1 {
-    background: rgb(173,150,220);
-    background: linear-gradient(90deg, rgba(173,150,220,0.4318102240896359) 45%, rgba(32,166,255,1) 70%);
+.btn_principal {
+    background-image: url(Backg_button.svg);
     border-radius: 50px;
     color: white;
     display: inherit;
@@ -134,11 +133,17 @@ header {
     font-size: 16px;
     font-family: Roboto;
     font-weight: 500;
-    width: 100%;
     height: 56px;
     margin: 0 auto;
-    margin-top: 64px;
     border: 0;
+}
+.btn_form {
+    margin-top: 64px;
+    width: 100%;
+}
+.btn_modal {
+    margin-top: 34px;
+    width: 100%;
 }
 .panel-group {
     margin-top: 32px;
@@ -185,14 +190,104 @@ header {
     }
 }
 
+.modal_text {
+    text-align: center;
+    margin-bottom: 65px;
+    h3 {
+        color: $color-primario;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    p {
+        font-size:18px;
+        color: #162C56;
+        font-weight: 700;
+        margin-bottom: 16px;
+        margin: 0 auto;
+    }
+}
+.owl-nav {
+    button {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $color-primario !important;
+        border-radius: 50px;
+    }    
+    span {
+        width: 15px;
+        font-size: 32px;
+        color: dodgerblue;
+        opacity: 0.5;
+        line-height: 0.7;
+    }
+}
+.owl-carousel {
+    position: relative;
+
+    .owl-prev {
+        left: -28px;
+        position: relative;
+    }
+    .owl-next {
+        right: -28px;
+        position: relative;
+        float: right;
+    }
+}
+.owl-nav {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+}
+.modal-header {
+    border: none;
+    .close, .close:focus, .close:hover {
+        color: $color-primario;
+    }
+    .close {
+        font-size: 30px;
+    }
+
+}
+.owl-carousel {
+    width: 86%;
+    margin: 0 auto;
+}
+
 
 //Responsive
 
-/* Small devices (tablets, 768px and up) */
-//@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-
+@media (min-width: 992px) {
+    .modal-body {
+        padding: 0 15%;
+    }
+    .owl-carousel {
+        width: 100%;
+    }
+    .modal_text {
+        h3 {
+            font-size: 38px;
+        }
+        p {
+            font-size:18px;
+            width: 432px;
+        }
+    }
+    .owl-carousel {
+         .owl-prev {
+            left: -37px;
+        }
+        .owl-next {
+            right: -37px;
+        }
+    } 
+    .btn_principal.btn_modal {
+        width: 320px;
+    } 
+    .cont_numd {
+        padding-left: 0;
+    }  
+}
 @media (min-width: 1200px) { 
     header .logo-Banbif {
         width: 165px;
@@ -229,13 +324,11 @@ header {
             right: 134px;
         }
     }
-    .btn-default {
+    .btn_principal {
         width: 320px;
     }    
     .contenedor_form  {
         margin-top: 64px;
     }
- }
 
-/* Large devices (large desktops, 1200px and up) */
-//@media (min-width: @screen-lg-min) { ... }
+ }
