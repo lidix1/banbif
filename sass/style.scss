@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lato:wght@300;400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+$color-primario: #20A6FF;
+$color-secundario: #162C56;
+$color-text1: #696F72;
+$gris1: #A1A1A1;
+$gris2: #5B5B5B;
+*:focus { outline: none; }
+*:active { outline: none; }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Lato;
+}
+header {
+    .logo-Banbif {
+        width: 110px;
+    }
+    a {
+        
+        display: inline-block;
+    }
+    h1 {
+        margin-top: 25px;
+        line-height: 0;
+    }
+}
+.banner_text {
+    position: relative;
+    margin-top:46px;
+    p{
+        color: $color-primario;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 1;
+    }
+    h2{
+        color: $color-secundario;
+        font-weight: 600;
+        font-size: 33px;
+        margin-top: 0;
+    }
+    span{
+        color: $color-primario;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 0.8;
+        strong {
+            font-size: 30px;
+            font-weight: 900;
+        }
+    }
+
+}
+.banner_img {
+    position: relative;
+    .banner_img_principal {
+        width: 85%;
+        left: -33px;
+        position: relative;
+    }
+    .banner_img_secondary {
+        position: absolute;
+        top: 21%;
+        right: -15px;
+        width: 50%;
+    }
+}
+.contenedor_form {
+    .form-group {
+        margin-bottom: 24px;
+    }
+    .contenedor_form_texto {
+        font-size: 16px;
+        color: $color-text1;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+    select {
+        height: 46px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $gris1;
+        padding-left: 10px;
+        font-weight: 500;
+    }
+    .form-input {
+        height: 46px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $gris1;
+        padding-left: 12px;
+        color: $gris1;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    .checkbox input[type=checkbox] {
+        border-radius: 5px;
+        border: 1px solid $gris1;        
+        width: 20px;
+        height: 20px;
+        margin-left: -28px;
+        margin-top: 0   ;
+    }
+    .checkbox label, .radio label {
+        padding-left: 28px;
+    }
+    .checkbox {
+        margin-bottom: 16px;
+    }
+    
+}
+.checkbox {
+    label {
+        font-size: 12px;
+        font-family: Roboto;
+        color: $gris2;
+    }
+    a {
+        color: $color-primario;
+    }
+}
+.btn-default1 {
+    background: rgb(173,150,220);
+    background: linear-gradient(90deg, rgba(173,150,220,0.4318102240896359) 45%, rgba(32,166,255,1) 70%);
+    border-radius: 50px;
+    color: white;
+    display: inherit;
+    text-align: center;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 500;
+    width: 100%;
+    height: 56px;
+    margin: 0 auto;
+    margin-top: 64px;
+    border: 0;
+}
+.panel-group {
+    margin-top: 32px;
+    .title-coll {
+        font-size: 14px;
+        color: $color-primario;
+        font-weight: 600;
+        display: inline-block;
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        text-decoration: none;
+        position: relative;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image: url(minus.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+        }        
+    }
+    a.collapsed {
+        border-bottom: 1px solid #C4C4C4;
+        &::after {
+            background-image: url(plus.svg);
+        }
+    }
+    #headingTwo a {
+        border: none;
+        
+    }
+    .panel-body {
+        font-size: 9px;
+        color: #696F72;
+        padding: 0;
+    }
+    .panel {
+        border: 0;
+        box-shadow: inherit;
+    }
+}
+
+
+//Responsive
+
+/* Small devices (tablets, 768px and up) */
+//@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 1200px) { 
+    header .logo-Banbif {
+        width: 165px;
+    }
+    header h1 {
+        margin-top: 72px;
+    }
+    .banner_text {
+        padding-left: 40px;
+        margin-top: 80px;
+        p{
+            font-size: 48px;
+            line-height: 0.8;
+        }
+        h2{
+            font-size: 56px;
+        }
+        span{
+            font-size: 36px;
+            line-height: 0.8;
+            strong {
+                font-size: 48px;
+                font-weight: 900;
+            }
+        }
+    }
+    .banner_img {
+        .banner_img_principal {
+            width: auto;
+            left: 0;
+        }
+        .banner_img_secondary {
+            width: auto;
+            right: 134px;
+        }
+    }
+    .btn-default {
+        width: 320px;
+    }    
+    .contenedor_form  {
+        margin-top: 64px;
+    }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+//@media (min-width: @screen-lg-min) { ... }
